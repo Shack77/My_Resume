@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>My Resume</title>
-    </head>
-    <body>
-        <h1>Shanmukha Ganesna</h1>
-        <img src="./Image Shanmukha_edited.jpg" alt="Image of Shanmukha">
-        <p>I am a dedicated person who is looking forward to work as a Web Developer</p>
-        <hr>
-        <h2>Education</h2>
-        <ul>
-            <li>Master of Science in Computer Science and Engineering  (Expected 2025)<br>
-                Santa Clara University, Santa Clara, CA.</li>
-            <li>Bachelor of Engineering in Computer Science and Engineering (2023)<br>
-                JSS Academy of Technical Education, Bangalore, Karnataka, India</li>
-        </ul>
-         <h2>Experience</h2>
-         <h3>Projects:</h3>
-         <h4>Dynamic Pricing Using Serverless Architecture  (2024):</h4>
-         <ul>
-            <li>Implementation of dynamic pricing using Lambda Functions for various products and events.</li>
-            <li>Here we have formulated the simplified function that will calculate the prices of products based on the current demand and competition in the market.</li>
-            <li>These formulations are done using AWS Lambda functions.</li>
-            <li>The data that is required for this function is stored in DynamoDB.</li>
-         </ul>
-         <h2>Skills</h2>
-         <h3>Programing languages:</h3>
-         <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-         </ul>
-         <h3>Soft Skills:</h3>
-         <ul>
-            <li>Problem Solving</li>
-            <li>Team Player</li>
-         </ul>
-         <a href="./contact.html">Contact Me</a><br>
-         <a href="./hobbies.html">My Hobbies</a><br>
-         <footer>@ 2024 Shanmukha. All Rigths are reserved.</footer>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanmukha Ganesna | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Shanmukha Ganesna</h1>
+    <p>Software Developer | MS in Computer Science @ Santa Clara University</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <img src="./Image Shanmukha_edited.jpg" alt="Shanmukha Ganesna photo" />
+    <h2>Welcome!</h2>
+    <p>I'm passionate about AI, software development, and building user-friendly web applications.</p>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Library Management System</h3>
+        <p>Built using Core Java with file handling and OOP concepts to manage library operations efficiently.</p>
+      </div>
+      <div class="project">
+        <h3>Dynamic Pricing with AWS Lambda</h3>
+        <p>Implemented dynamic pricing logic using serverless architecture with DynamoDB and AWS Lambda.</p>
+      </div>
+      <div class="project">
+        <h3>Dogmate</h3>
+        <p>A responsive website to help dog owners connect, developed using HTML, CSS, JavaScript, and Bootstrap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a curious and driven software developer with interests in AI, machine learning, and cloud solutions.</p>
+    <p>Currently pursuing my Master’s in Computer Science at Santa Clara University. In my free time, I enjoy working on personal projects and learning new technologies.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:shanmukha7.g@gmail.com">shanmukha7.g@gmail.com</a></p>
+    <p>Phone: +1 (669) 230-2903</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shanmukha-ganesna-5b5a77205" target="_blank">Visit my profile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shanmukha Ganesna</p>
+  </footer>
+</body>
 </html>
