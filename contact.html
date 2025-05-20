@@ -1,9 +1,46 @@
-<h1>Contact Shanmukha</h1>
-<p>Tel: +1(669) 230-2230</p>
-<p>Email: Shanmukha@gmail.com</p>
-<p>Address:</p>
-<p>
-  431 Alameda<br />
-  Santa Clara<br />
-   US<br />
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+</head>
+<body>
+  <h1>Contact Form</h1>
+  <form id="contactForm">
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+
+    <label>Message:</label>
+    <textarea name="message" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      try {
+        const res = await fetch('http://localhost:3000/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        alert(result.message || result.error);
+      } catch (err) {
+        alert('Failed to send message. Try again later.');
+      }
+    });
+  </script>
+</body>
+</html>

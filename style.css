@@ -4,6 +4,12 @@ body {
   margin: 0;
   background-color: #fdfdfd;
   color: #222;
+  animation: fadeInBody 1s ease-in;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 header {
@@ -11,6 +17,12 @@ header {
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 nav {
@@ -19,6 +31,12 @@ nav {
   justify-content: center;
   background-color: #0a9396;
   padding: 1rem;
+  animation: fadeInNav 1s ease-in;
+}
+
+@keyframes fadeInNav {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 nav a {
@@ -26,6 +44,12 @@ nav a {
   text-decoration: none;
   margin: 0.5rem 1rem;
   font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: #ffcb77;
 }
 
 .hero {
@@ -35,6 +59,12 @@ nav a {
   text-align: center;
   background-color: #94d2bd;
   padding: 3rem 1rem;
+  animation: fadeInHero 1.5s ease-in;
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .hero img {
@@ -43,11 +73,19 @@ nav a {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 #projects {
   padding: 2rem;
   background-color: #e9ecef;
+  animation: fadeInSection 2s ease-in;
 }
 
 #projects h2 {
@@ -66,11 +104,30 @@ nav a {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #005f73;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #ae2012;
 }
 
 #about {
   padding: 2rem;
   background-color: #fefae0;
+  animation: fadeInSection 2s ease-in;
 }
 
 #contact {
@@ -79,6 +136,12 @@ nav a {
   align-items: center;
   padding: 2rem;
   background-color: #d9f99d;
+  animation: fadeInSection 2s ease-in;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 #contact a {
@@ -111,4 +174,28 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  animation: fadeInFooter 2s ease-in;
+}
+
+@keyframes fadeInFooter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.resume-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
 }
