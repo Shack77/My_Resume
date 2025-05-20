@@ -1,46 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanmukha Ganesna | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Contact Form</h1>
-  <form id="contactForm">
-    <label>Name:</label>
-    <input type="text" name="name" required><br><br>
+  <header>
+    <h1>Shanmukha Ganesna</h1>
+    <p>Software Developer | MS in Computer Science @ Santa Clara University</p>
+  </header>
 
-    <label>Email:</label>
-    <input type="email" name="email" required><br><br>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/Shack77" target="_blank">GitHub</a>
+  </nav>
 
-    <label>Message:</label>
-    <textarea name="message" required></textarea><br><br>
+  <section class="hero">
+    <img src="./Image Shanmukha_edited.jpg" alt="Shanmukha Ganesna photo" />
+    <h2>Welcome!</h2>
+    <p>I'm passionate about AI, software development, and building user-friendly web applications.</p>
+  </section>
 
-    <button type="submit">Send Message</button>
-  </form>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
+      <div class="project">
+        <h3>CV-Based Attendance System Using Face Recognition</h3>
+        <p>Built a real-time attendance system that automatically logs student presence using face recognition.
+        Collected and preprocessed diverse student images. Leveraged OpenCV and dlib for accurate detection and recognition,
+        logging attendance data with timestamps in SQLite. Enabled multi-face detection to track multiple students in live streams.</p>
+        <p><strong>Technologies:</strong> OpenCV, dlib, Python, SQLite, Machine Learning</p>
+        <a href="https://github.com/Shack77/face-attendance-system" target="_blank">🔗 View on GitHub</a>
+      </div>
 
-      try {
-        const res = await fetch('http://localhost:3000/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        const result = await res.json();
-        alert(result.message || result.error);
-      } catch (err) {
-        alert('Failed to send message. Try again later.');
-      }
-    });
-  </script>
+      <div class="project">
+        <h3>Dynamic Pricing Using Serverless Architecture</h3>
+        <p>Designed and deployed a dynamic pricing engine using AWS Lambda to update prices based on real-time demand and market competition.
+        Integrated DynamoDB for data storage and used serverless architecture to ensure scalability and minimal overhead.</p>
+        <p><strong>Technologies:</strong> AWS Lambda, Amazon DynamoDB, Serverless Framework</p>
+        <a href="https://github.com/Shack77/dynamic-pricing-aws-lambda" target="_blank">🔗 View on GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Antibiofilm Peptide Classification</h3>
+        <p>Developed a peptide classifier using a deep neural network from scratch in NumPy to predict antibiofilm activity.
+        Used 2-mer encoding of amino acid sequences, handled class imbalance with weighted loss, and achieved over 84% MCC.</p>
+        <p><strong>Technologies:</strong> Python, NumPy, scikit-learn, Machine Learning, Bioinformatics</p>
+        <a href="https://github.com/Shack77/antibiofilm-classifier" target="_blank">🔗 View on GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Lane Detection and Steering Angle Estimation</h3>
+        <p>Created a computer vision model to detect lane lines and estimate steering direction from dashcam videos.
+        Employed Canny edge detection, Hough Transform, and geometric calculations to simulate real-time autonomous driving.</p>
+        <p><strong>Technologies:</strong> Python, OpenCV, NumPy</p>
+        <a href="https://github.com/Shack77/lane-detection-steering" target="_blank">🔗 View on GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Dogmate: A Pet Matching Website</h3>
+        <p>Built a fully responsive web app to match dogs with potential mates. Designed clean UI using HTML/CSS and integrated form validation,
+        alerts, and mobile-friendly layout with Bootstrap and JavaScript.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+        <a href="https://github.com/Shack77/dogmate" target="_blank">🔗 View on GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a curious and driven software developer with interests in AI, machine learning, and cloud solutions.</p>
+    <p>Currently pursuing my Master’s in Computer Science at Santa Clara University. In my free time, I enjoy working on personal projects and learning new technologies.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:shanmukha7.g@gmail.com">shanmukha7.g@gmail.com</a></p>
+    <p>Phone: +1 (669) 230-2903</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shanmukha-ganesna-5b5a77205" target="_blank">shanmukha-ganesna-5b5a77205</a></p>
+    <p>GitHub: <a href="https://github.com/Shack77" target="_blank">Shack77</a></p>
+  </section>
+
+  <section class="text-center">
+    <a href="resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shanmukha Ganesna</p>
+  </footer>
 </body>
 </html>
