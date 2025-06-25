@@ -199,3 +199,17 @@ footer {
   background-color: #023e8a;
   transform: scale(1.05);
 }
+/* Slide-in animation for entire sections */
+.slide-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
